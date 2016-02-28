@@ -11,12 +11,12 @@
     <% end %>
   </div>
 </div>
-
-<%= form_for(@message) do |f| %>
+　<%= form_for(@message) do |f| %>
   名前:
-  <%= f.text_field :name %>
-
+  <input type="text" name="message[name]" class="form-control" >
+<br>
   内容:
-  <%= f.text_field :body %>
+  <textarea name="message[body]" class="form-control" rows="3"></textarea>
   <%= f.submit class: "btn btn-sm btn-primary" %>
 <% end %>
+
