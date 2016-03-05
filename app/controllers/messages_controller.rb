@@ -8,6 +8,12 @@ class MessagesController < ApplicationController
   def edit
   end
   
+  def create
+    @message = Message.new(message_params)
+    @message.save
+    redirect_to root_path , notice: 'メッセージを保存しました'
+  end
+
   def destroy
     @message.destroy
     redirect_to root_path, notice: 'メッセージを削除しました'
