@@ -19,6 +19,6 @@
   <%= f.text_field :body %>
   
   年齢:
-  <%= f.number_field_tag :age, :min >= 0 %>
+  <%= f.number_field :age, :min 0 %>
   <%= f.submit class: "btn btn-sm btn-primary" %>
 <% end %>
